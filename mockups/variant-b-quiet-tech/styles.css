@@ -423,25 +423,27 @@
 
   .team-card__visual {
     aspect-ratio: 4/3;
-    background:
-      linear-gradient(135deg, rgba(0,102,255,0.25) 0%, rgba(123,63,255,0.25) 100%),
-      var(--bg-strong);
+    background: var(--bg);
     border: 1px solid var(--rule-strong);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     position: relative; overflow: hidden;
+    margin: 0;
   }
-  .team-card__pattern {
+  .team-card__visual img {
     position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 25% 30%, rgba(0,102,255,0.30) 0%, transparent 40%),
-      radial-gradient(circle at 75% 70%, rgba(123,63,255,0.30) 0%, transparent 40%),
-      repeating-linear-gradient(45deg, transparent 0 14px, rgba(255,255,255,0.025) 14px 15px);
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) brightness(0.92) contrast(1.05);
   }
   .team-card__visual::after {
-    content: ''; position: absolute; inset: 1.5rem;
-    border: 1px dashed rgba(255,255,255,0.18);
-    border-radius: calc(var(--radius-lg) - 0.5rem);
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(
+      150deg,
+      rgba(0,102,255,0.30) 0%,
+      transparent 45%,
+      rgba(7,7,11,0.45) 100%
+    );
     pointer-events: none;
   }
   .team-card__overlay {
@@ -607,28 +609,30 @@
     align-items: center;
   }
   @media (min-width: 880px) { .promise__inner { grid-template-columns: 1fr 1fr; } }
-  .promise__visual { aspect-ratio: 4/3; }
-  .promise__photo {
-    width: 100%; height: 100%;
-    background:
-      linear-gradient(135deg, rgba(123,63,255,0.22) 0%, rgba(0,102,255,0.22) 100%),
-      var(--bg-strong);
-    border: 1px solid var(--rule-strong);
+  .promise__visual {
+    aspect-ratio: 4/3;
     border-radius: var(--radius-lg);
+    overflow: hidden;
     box-shadow: var(--shadow-lg);
-    position: relative; overflow: hidden;
+    border: 1px solid var(--rule-strong);
+    background: var(--bg);
+    position: relative;
+    margin: 0;
   }
-  .promise__photo-pattern {
+  .promise__visual img {
     position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 75% 25%, rgba(123,63,255,0.30) 0%, transparent 40%),
-      radial-gradient(circle at 25% 75%, rgba(0,102,255,0.30) 0%, transparent 40%),
-      repeating-linear-gradient(135deg, transparent 0 12px, rgba(255,255,255,0.025) 12px 13px);
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) brightness(0.92) contrast(1.05);
   }
-  .promise__photo::after {
-    content: ''; position: absolute; inset: 1.5rem;
-    border: 1px dashed rgba(255,255,255,0.18);
-    border-radius: calc(var(--radius-lg) - 0.5rem);
+  .promise__visual::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(
+      150deg,
+      rgba(123,63,255,0.30) 0%,
+      transparent 45%,
+      rgba(7,7,11,0.45) 100%
+    );
     pointer-events: none;
   }
   .promise__copy h2 { margin-block: 0.5rem 1.25rem; }

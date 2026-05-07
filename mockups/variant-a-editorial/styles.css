@@ -325,24 +325,21 @@
   .hero__visual { position: relative; min-height: 24rem; }
   .hero__photo {
     aspect-ratio: 4/5;
-    background:
-      linear-gradient(135deg, rgba(14,14,16,0.55) 0%, rgba(14,14,16,0.15) 60%, rgba(164,217,0,0.2) 100%),
-      linear-gradient(45deg, #1f2914, #2c3a1c, #3e4d28);
+    background: var(--ink);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     position: relative; overflow: hidden;
+    margin: 0;
   }
-  .hero__photo::before {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(45deg, transparent 0 14px, rgba(255,255,255,0.04) 14px 15px),
-      radial-gradient(circle at 30% 25%, rgba(164,217,0,0.25) 0%, transparent 45%),
-      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  .hero__photo img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.05);
   }
   .hero__photo::after {
-    content: ''; position: absolute; inset: 1.5rem;
-    border: 1px dashed rgba(255,255,255,0.15);
-    border-radius: calc(var(--radius-lg) - 0.5rem);
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(14,14,16,0.45) 100%);
     pointer-events: none;
   }
   .hero__photo-overlay {
@@ -442,23 +439,20 @@
 
   .intro__photo {
     aspect-ratio: 4/3;
-    background:
-      linear-gradient(135deg, rgba(164,217,0,0.15) 0%, transparent 60%),
-      linear-gradient(45deg, #1f2914, #3a4a26, #5a7039);
+    background: var(--ink);
     border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
     position: relative; overflow: hidden;
+    margin: 0;
   }
-  .intro__photo-pattern {
+  .intro__photo img {
     position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 20% 80%, rgba(164,217,0,0.18) 0%, transparent 35%),
-      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 40%),
-      repeating-linear-gradient(135deg, transparent 0 10px, rgba(255,255,255,0.025) 10px 11px);
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.05);
   }
   .intro__photo::after {
-    content: ''; position: absolute; inset: 1.5rem;
-    border: 1px dashed rgba(255,255,255,0.18);
-    border-radius: calc(var(--radius-lg) - 0.5rem);
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(14,14,16,0.4) 100%);
     pointer-events: none;
   }
   .intro__chip {
@@ -683,23 +677,20 @@
   .awards-block p { color: var(--ink-soft); font-size: 1.0625rem; line-height: 1.6; max-width: 30rem; margin-bottom: 1.75rem; }
   .awards-block__photo {
     aspect-ratio: 4/3;
-    background:
-      linear-gradient(135deg, transparent 0%, rgba(14,14,16,0.25) 100%),
-      linear-gradient(45deg, #1f2914, #3a4a26, #5a7039);
+    background: var(--ink);
     border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
     position: relative; overflow: hidden;
+    margin: 0;
   }
-  .awards-block__photo-pattern {
+  .awards-block__photo img {
     position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 30% 30%, rgba(164,217,0,0.22) 0%, transparent 45%),
-      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 40%),
-      repeating-linear-gradient(45deg, transparent 0 12px, rgba(255,255,255,0.03) 12px 13px);
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.95) contrast(1.05);
   }
   .awards-block__photo::after {
-    content: ''; position: absolute; inset: 1.5rem;
-    border: 1px dashed rgba(255,255,255,0.18);
-    border-radius: calc(var(--radius-lg) - 0.5rem);
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(14,14,16,0.35) 100%);
     pointer-events: none;
   }
 
