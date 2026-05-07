@@ -6,27 +6,29 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="referrer" content="no-referrer">
   <title>Havoc Digital — Mockup preview</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230E1116'/><text x='50' y='68' font-family='Georgia,serif' font-size='62' font-weight='700' text-anchor='middle' fill='white'>H</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230E0E10'/><text x='50' y='72' font-family='-apple-system,sans-serif' font-size='68' font-weight='900' text-anchor='middle' fill='%23A4D900'>H</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
   <style>
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F7F4EF; --ink: #0E1116; --ink-soft: #2A2D33; --ink-mute: #6B6F76;
-      --rule: #DDD6C8; --bg-elev: #FBF9F4;
-      --accent-a: #2F4A3A; --accent-b: #5B6CFF;
-      --font-serif: 'Fraunces', Georgia, serif;
-      --font-sans: 'Inter', system-ui, sans-serif;
+      --bg: #FAFAF8; --ink: #0E0E10; --ink-soft: #2A2A2E; --ink-mute: #6B6B72;
+      --rule: #E5E5E2; --bg-elev: #FFFFFF;
+      --lime: #A4D900; --lime-deep: #8FBE00; --lime-soft: #E8F5BC;
+      --blue: #0066FF; --violet: #7B3FFF;
+      --gradient: linear-gradient(135deg, #0066FF 0%, #4D7CFF 50%, #7B3FFF 100%);
+      --font: 'Inter', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --ease: cubic-bezier(0.2, 0.7, 0.25, 1);
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #0E1116; --ink: #F7F4EF; --ink-soft: #D5D2CB; --ink-mute: #8E928F; --rule: #2A2D33; --bg-elev: #15181D; }
+      :root { --bg: #07070B; --ink: #FFFFFF; --ink-soft: #C4C4D0; --ink-mute: #7E7E92; --rule: #1F1F2C; --bg-elev: #0F0F15; }
     }
-    html { background: var(--bg); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+    html { background: var(--bg); color: var(--ink); font-family: var(--font); -webkit-font-smoothing: antialiased; }
     body { min-height: 100dvh; display: grid; place-items: center; padding: clamp(1.5rem, 4vw, 3rem); line-height: 1.55; }
 
-    main { width: 100%; max-width: 60rem; }
+    main { width: 100%; max-width: 64rem; }
     .header { text-align: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 0.5em;
@@ -37,15 +39,16 @@
     }
     .eyebrow::before {
       content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--accent-a); box-shadow: 0 0 0 0 var(--accent-a);
+      background: var(--lime); box-shadow: 0 0 0 0 var(--lime);
       animation: pulse 2.4s ease-in-out infinite;
     }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent-a) 50%, transparent); } 70% { box-shadow: 0 0 0 6px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(164,217,0,0.5); } 70% { box-shadow: 0 0 0 6px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 
     h1 {
-      font-family: var(--font-serif); font-weight: 500;
-      font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); line-height: 1.1;
-      letter-spacing: -0.02em; text-wrap: balance; margin-bottom: 0.75rem;
+      font-family: var(--font); font-weight: 900;
+      font-size: clamp(2rem, 1.4rem + 2.5vw, 3.25rem); line-height: 1.05;
+      letter-spacing: -0.04em; text-wrap: balance; margin-bottom: 0.75rem;
+      text-transform: uppercase;
     }
     .lede { font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem); color: var(--ink-soft); max-width: 38rem; margin-inline: auto; text-wrap: pretty; }
 
@@ -58,55 +61,117 @@
     }
 
     .card {
-      background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 16px;
-      padding: clamp(1.5rem, 3vw, 2.25rem);
-      text-decoration: none; color: inherit;
-      display: flex; flex-direction: column; gap: 1rem;
-      transition: border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
+      border-radius: 18px;
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      text-decoration: none;
+      display: flex; flex-direction: column; gap: 1.25rem;
+      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
       position: relative; overflow: hidden;
+      min-height: 22rem;
     }
-    .card::after {
-      content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
-      background: radial-gradient(circle at top right, var(--card-accent, transparent) 0%, transparent 70%);
-      opacity: 0.12; pointer-events: none;
-    }
-    .card:hover { border-color: var(--card-accent); transform: translateY(-3px); box-shadow: 0 16px 36px -16px rgba(0,0,0,0.18); }
-    .card:focus-visible { outline: 2px solid var(--card-accent); outline-offset: 3px; }
+    .card:hover { transform: translateY(-4px); }
+    .card:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
-    .card--a { --card-accent: var(--accent-a); }
-    .card--b { --card-accent: var(--accent-b); }
+    /* Variant A — bright lime */
+    .card--a {
+      background: var(--bg-elev);
+      border: 1.5px solid var(--rule);
+      color: var(--ink);
+    }
+    .card--a:hover { box-shadow: 0 24px 48px -16px rgba(0,0,0,0.18); border-color: var(--lime-deep); }
+    .card--a::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+      background: var(--lime);
+    }
+    .card--a::after {
+      content: ''; position: absolute; bottom: 0; right: 0;
+      width: 60%; height: 100%;
+      background: radial-gradient(circle at bottom right, rgba(164,217,0,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Variant B — dark electric */
+    .card--b {
+      background: #07070B;
+      border: 1.5px solid #1F1F2C;
+      color: #FFFFFF;
+      position: relative;
+    }
+    .card--b:hover { box-shadow: 0 24px 48px -16px rgba(0,102,255,0.4), 0 0 0 1px rgba(0,102,255,0.4); }
+    .card--b::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+      background: var(--gradient);
+    }
+    .card--b::after {
+      content: ''; position: absolute; bottom: 0; right: 0;
+      width: 60%; height: 100%;
+      background: radial-gradient(circle at bottom right, rgba(123,63,255,0.30) 0%, transparent 65%);
+      pointer-events: none;
+    }
 
     .card__label {
       font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase;
-      letter-spacing: 0.18em; color: var(--card-accent); font-weight: 500;
+      letter-spacing: 0.18em; font-weight: 600;
+      position: relative; z-index: 1;
     }
+    .card--a .card__label { color: var(--lime-deep); }
+    .card--b .card__label {
+      background: var(--gradient); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+
     .card__title {
-      font-family: var(--font-serif); font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
-      font-weight: 500; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance;
+      font-family: var(--font); font-weight: 900;
+      font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem);
+      line-height: 1.05; letter-spacing: -0.035em; text-wrap: balance;
+      text-transform: uppercase;
+      position: relative; z-index: 1;
     }
-    .card--b .card__title { font-family: var(--font-sans); font-weight: 600; letter-spacing: -0.025em; }
-    .card__desc { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.55; flex: 1; }
-    .card__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .chip { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.65rem; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-mute); }
+    .card--a .card__title em { color: var(--lime-deep); font-style: normal; }
+    .card--b .card__title em {
+      background: var(--gradient); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent; font-style: normal;
+    }
+
+    .card__desc {
+      font-size: 0.95rem; line-height: 1.55; flex: 1;
+      position: relative; z-index: 1;
+    }
+    .card--a .card__desc { color: var(--ink-soft); }
+    .card--b .card__desc { color: #C4C4D0; }
+
+    .card__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; position: relative; z-index: 1; }
+    .chip {
+      font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 0.3rem 0.65rem; border-radius: 999px; font-weight: 500;
+    }
+    .card--a .chip { border: 1px solid var(--rule); color: var(--ink-mute); background: rgba(164,217,0,0.08); }
+    .card--b .chip { border: 1px solid #2A2A38; color: #C4C4D0; background: rgba(0,102,255,0.06); }
+
     .card__cta {
       display: inline-flex; align-items: center; gap: 0.4em;
       font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
-      letter-spacing: 0.12em; color: var(--card-accent); font-weight: 500;
-      padding-top: 0.75rem; border-top: 1px dashed var(--rule);
-      transition: gap 160ms ease;
+      letter-spacing: 0.12em; font-weight: 700;
+      padding: 0.85rem 1.1rem; border-radius: 8px;
+      transition: gap 160ms var(--ease), transform 160ms var(--ease);
+      align-self: flex-start; margin-top: auto;
+      position: relative; z-index: 1;
     }
-    .card:hover .card__cta { gap: 0.7em; }
+    .card--a .card__cta { background: var(--lime); color: var(--ink); }
+    .card--a:hover .card__cta { gap: 0.7em; background: var(--ink); color: var(--lime); }
+    .card--b .card__cta { background: var(--gradient); color: #FFFFFF; box-shadow: 0 0 24px -6px rgba(0,102,255,0.5); }
+    .card--b:hover .card__cta { gap: 0.7em; }
 
     .footer {
       margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: center;
       font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em;
       color: var(--ink-mute);
     }
-    .footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
-    .footer a:hover { color: var(--accent-a); border-bottom-color: var(--accent-a); }
+    .footer a { color: var(--ink-soft); border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+    .footer a:hover { color: var(--lime-deep); border-bottom-color: var(--lime-deep); }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      *,*::before,*::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -115,33 +180,35 @@
     <header class="header">
       <span class="eyebrow">Private preview · Not indexed</span>
       <h1>Havoc Digital — Home page mockups</h1>
-      <p class="lede">Two strategic directions for your review. Open each, scroll through, then compare side-by-side.</p>
+      <p class="lede">Two bold strategic directions inspired by today's leading agency websites. Click into each, scroll all the way through, then come back to compare.</p>
     </header>
 
     <section class="cards" aria-label="Mockup variants">
+
       <a href="./mockups/variant-a-editorial/" class="card card--a">
-        <span class="card__label">Variant A</span>
-        <h2 class="card__title">Editorial Authority</h2>
-        <p class="card__desc">Pentagram × Stripe Press × NYT opinion. Senior, restrained, premium positioning. Built to attract clients who care about thinking quality.</p>
+        <span class="card__label">Variant A · Bright</span>
+        <h2 class="card__title">Bright<br><em>Growth</em></h2>
+        <p class="card__desc">SEOWorks-inspired energy. Saturated lime green, bold uppercase headlines, heavy social proof — awards, client logo wall, big results band. Optimistic and confident.</p>
         <div class="card__chips">
-          <span class="chip">Warm off-white</span>
-          <span class="chip">Forest accent</span>
-          <span class="chip">Editorial serif</span>
+          <span class="chip">White + lime</span>
+          <span class="chip">Bold sans</span>
+          <span class="chip">Award-loaded</span>
         </div>
         <span class="card__cta">Open Variant A →</span>
       </a>
 
       <a href="./mockups/variant-b-quiet-tech/" class="card card--b">
-        <span class="card__label">Variant B</span>
-        <h2 class="card__title">Quiet Tech / Data-Forward</h2>
-        <p class="card__desc">Linear × Vercel × modern SaaS. Calm, technical, transparent. Built for data-literate founders and tech-forward SMBs.</p>
+        <span class="card__label">Variant B · Dark</span>
+        <h2 class="card__title">Dark<br><em>Performance</em></h2>
+        <p class="card__desc">ClickSlice-inspired energy. Cinematic black, electric blue → violet gradient, dashboard-style data viz, numbered process, trust-loaded throughout. Technical and sharp.</p>
         <div class="card__chips">
-          <span class="chip">Crisp white</span>
-          <span class="chip">Indigo accent</span>
-          <span class="chip">Geometric sans</span>
+          <span class="chip">Dark + electric</span>
+          <span class="chip">Bold sans</span>
+          <span class="chip">Data-forward</span>
         </div>
         <span class="card__cta">Open Variant B →</span>
       </a>
+
     </section>
 
     <p class="footer">
