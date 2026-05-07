@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Havoc Digital — Mockup preview</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230E1116'/><text x='50' y='68' font-family='Georgia,serif' font-size='62' font-weight='700' text-anchor='middle' fill='white'>H</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F7F4EF; --ink: #0E1116; --ink-soft: #2A2D33; --ink-mute: #6B6F76;
+      --rule: #DDD6C8; --bg-elev: #FBF9F4;
+      --accent-a: #2F4A3A; --accent-b: #5B6CFF;
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0E1116; --ink: #F7F4EF; --ink-soft: #D5D2CB; --ink-mute: #8E928F; --rule: #2A2D33; --bg-elev: #15181D; }
+    }
+    html { background: var(--bg); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+    body { min-height: 100dvh; display: grid; place-items: center; padding: clamp(1.5rem, 4vw, 3rem); line-height: 1.55; }
+
+    main { width: 100%; max-width: 60rem; }
+    .header { text-align: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5em;
+      font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--ink-mute);
+      padding: 0.4rem 0.875rem; border: 1px solid var(--rule); border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .eyebrow::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-a); box-shadow: 0 0 0 0 var(--accent-a);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent-a) 50%, transparent); } 70% { box-shadow: 0 0 0 6px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+    h1 {
+      font-family: var(--font-serif); font-weight: 500;
+      font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); line-height: 1.1;
+      letter-spacing: -0.02em; text-wrap: balance; margin-bottom: 0.75rem;
+    }
+    .lede { font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem); color: var(--ink-soft); max-width: 38rem; margin-inline: auto; text-wrap: pretty; }
+
+    .cards {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 16px;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 1rem;
+      transition: border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
+      position: relative; overflow: hidden;
+    }
+    .card::after {
+      content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+      background: radial-gradient(circle at top right, var(--card-accent, transparent) 0%, transparent 70%);
+      opacity: 0.12; pointer-events: none;
+    }
+    .card:hover { border-color: var(--card-accent); transform: translateY(-3px); box-shadow: 0 16px 36px -16px rgba(0,0,0,0.18); }
+    .card:focus-visible { outline: 2px solid var(--card-accent); outline-offset: 3px; }
+
+    .card--a { --card-accent: var(--accent-a); }
+    .card--b { --card-accent: var(--accent-b); }
+
+    .card__label {
+      font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--card-accent); font-weight: 500;
+    }
+    .card__title {
+      font-family: var(--font-serif); font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+      font-weight: 500; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance;
+    }
+    .card--b .card__title { font-family: var(--font-sans); font-weight: 600; letter-spacing: -0.025em; }
+    .card__desc { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.55; flex: 1; }
+    .card__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.65rem; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-mute); }
+    .card__cta {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--card-accent); font-weight: 500;
+      padding-top: 0.75rem; border-top: 1px dashed var(--rule);
+      transition: gap 160ms ease;
+    }
+    .card:hover .card__cta { gap: 0.7em; }
+
+    .footer {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: center;
+      font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em;
+      color: var(--ink-mute);
+    }
+    .footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+    .footer a:hover { color: var(--accent-a); border-bottom-color: var(--accent-a); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <span class="eyebrow">Private preview · Not indexed</span>
+      <h1>Havoc Digital — Home page mockups</h1>
+      <p class="lede">Two strategic directions for your review. Open each, scroll through, then compare side-by-side.</p>
+    </header>
+
+    <section class="cards" aria-label="Mockup variants">
+      <a href="./mockups/variant-a-editorial/" class="card card--a">
+        <span class="card__label">Variant A</span>
+        <h2 class="card__title">Editorial Authority</h2>
+        <p class="card__desc">Pentagram × Stripe Press × NYT opinion. Senior, restrained, premium positioning. Built to attract clients who care about thinking quality.</p>
+        <div class="card__chips">
+          <span class="chip">Warm off-white</span>
+          <span class="chip">Forest accent</span>
+          <span class="chip">Editorial serif</span>
+        </div>
+        <span class="card__cta">Open Variant A →</span>
+      </a>
+
+      <a href="./mockups/variant-b-quiet-tech/" class="card card--b">
+        <span class="card__label">Variant B</span>
+        <h2 class="card__title">Quiet Tech / Data-Forward</h2>
+        <p class="card__desc">Linear × Vercel × modern SaaS. Calm, technical, transparent. Built for data-literate founders and tech-forward SMBs.</p>
+        <div class="card__chips">
+          <span class="chip">Crisp white</span>
+          <span class="chip">Indigo accent</span>
+          <span class="chip">Geometric sans</span>
+        </div>
+        <span class="card__cta">Open Variant B →</span>
+      </a>
+    </section>
+
+    <p class="footer">
+      Mockup preview · 2026-05-07 · <a href="./mockups/README.md">Presentation guide</a>
+    </p>
+  </main>
+</body>
+</html>
