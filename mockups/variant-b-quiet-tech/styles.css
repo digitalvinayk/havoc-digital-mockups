@@ -199,22 +199,44 @@
 
   /* WORDMARK */
   .wordmark {
-    display: inline-flex; align-items: center; gap: 0.65rem;
+    display: inline-flex; align-items: center; gap: 0.6rem;
     font-family: var(--font); font-weight: 900;
     font-size: 1rem; letter-spacing: -0.02em;
     color: var(--ink); text-decoration: none;
   }
-  .wordmark__icon {
-    display: grid; place-items: center;
+  .wordmark__mark {
+    flex-shrink: 0;
     width: 2.25rem; height: 2.25rem;
-    background: var(--gradient);
+    display: block;
     border-radius: var(--radius-sm);
-    color: var(--ink); font-weight: 900; font-size: 1.25rem;
     box-shadow: var(--glow-blue);
   }
-  .wordmark__text { display: inline-flex; flex-direction: column; line-height: 0.95; letter-spacing: 0.02em; }
-  .wordmark__sub { font-size: 0.65rem; font-weight: 700; color: var(--ink-mute); letter-spacing: 0.12em; }
-  .wordmark--footer .wordmark__sub { color: var(--blue); }
+  .wordmark__text {
+    display: inline-flex; flex-direction: column;
+    line-height: 0.95; gap: 0.15rem;
+  }
+  .wordmark__name {
+    font-family: var(--font);
+    font-size: 1rem; font-weight: 900;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .wordmark__name em {
+    font-style: normal;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .wordmark__sub {
+    font-family: var(--font-mono);
+    font-size: 0.6rem; font-weight: 500;
+    color: var(--ink-mute);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+  .wordmark--footer .wordmark__sub { color: var(--blue-hi); }
 
   /* BUTTONS */
   .btn {
