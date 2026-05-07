@@ -1,0 +1,308 @@
+{
+  "_comment": "Reusable JSON-LD snippets for Havoc Digital. Embed each as <script type=\"application/ld+json\"> on the relevant page. Update placeholders (REPLACE_*) before publishing. Source design doc: docs/plans/2026-05-07-havoc-digital-redesign-design.md",
+  "_lastReviewed": "2026-05-07",
+  "snippets": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Havoc Digital",
+      "alternateName": "Havoc Digital Marketing",
+      "url": "https://havoc.digital",
+      "logo": "https://havoc.digital/assets/logo.svg",
+      "image": "https://havoc.digital/assets/og-image.jpg",
+      "description": "Boutique digital marketing agency founded in 2012, specializing in SEO, Google Ads, social media, content marketing, and reputation management for small to mid-sized businesses.",
+      "foundingDate": "2012",
+      "founder": {
+        "@type": "Person",
+        "name": "Ben Miranda"
+      },
+      "email": "info@havoc.digital",
+      "sameAs": [
+        "https://www.linkedin.com/company/havoc-digital",
+        "REPLACE_TWITTER_URL",
+        "REPLACE_FACEBOOK_URL"
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Thailand" }
+      ]
+    },
+    "localBusiness_sydney": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://havoc.digital/#sydney",
+      "name": "Havoc Digital — Sydney",
+      "image": "https://havoc.digital/assets/og-image.jpg",
+      "url": "https://havoc.digital",
+      "telephone": "+61 1300 13 38 13",
+      "email": "info@havoc.digital",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "REPLACE_STREET_ADDRESS",
+        "addressLocality": "Sydney",
+        "addressRegion": "NSW",
+        "postalCode": "REPLACE_POSTCODE",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8688,
+        "longitude": 151.2093
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:30"
+        }
+      ]
+    },
+    "localBusiness_london": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://havoc.digital/#london",
+      "name": "Havoc Digital — London",
+      "image": "https://havoc.digital/assets/og-image.jpg",
+      "url": "https://havoc.digital",
+      "telephone": "+44 (0)2 031 297 847",
+      "email": "info@havoc.digital",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "REPLACE_STREET_ADDRESS",
+        "addressLocality": "London",
+        "postalCode": "REPLACE_POSTCODE",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    },
+    "localBusiness_newyork": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://havoc.digital/#newyork",
+      "name": "Havoc Digital — New York",
+      "image": "https://havoc.digital/assets/og-image.jpg",
+      "url": "https://havoc.digital",
+      "telephone": "+1 347 408 0155",
+      "email": "info@havoc.digital",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "REPLACE_STREET_ADDRESS",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "REPLACE_POSTCODE",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      }
+    },
+    "localBusiness_bangkok": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://havoc.digital/#bangkok",
+      "name": "Havoc Digital — Bangkok",
+      "image": "https://havoc.digital/assets/og-image.jpg",
+      "url": "https://havoc.digital",
+      "telephone": "+66 (0)2 107 2830",
+      "email": "info@havoc.digital",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "REPLACE_STREET_ADDRESS",
+        "addressLocality": "Bangkok",
+        "postalCode": "REPLACE_POSTCODE",
+        "addressCountry": "TH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.7563,
+        "longitude": 100.5018
+      }
+    },
+    "person_benMiranda": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ben Miranda",
+      "jobTitle": "Founder & Principal Strategist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Havoc Digital",
+        "url": "https://havoc.digital"
+      },
+      "url": "https://havoc.digital/about/ben-miranda",
+      "image": "https://havoc.digital/assets/ben-miranda.jpg",
+      "sameAs": [
+        "REPLACE_LINKEDIN_URL",
+        "REPLACE_TWITTER_URL"
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Google Ads",
+        "Performance Marketing",
+        "Local SEO",
+        "Digital Strategy"
+      ]
+    },
+    "website_searchAction": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://havoc.digital",
+      "name": "Havoc Digital",
+      "description": "Boutique digital marketing agency since 2012",
+      "publisher": { "@id": "https://havoc.digital/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://havoc.digital/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does SEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realistically: 4–6 months for new sites in low-competition niches, 9–12 months for established sites entering competitive markets, and 12–18 months for national-scale dominance. Any agency promising rankings in 30 days is misleading you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee specific rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. No legitimate agency does — Google has explicitly stated that ranking guarantees are a red flag. We guarantee process: audits delivered, content shipped, links earned, and monthly reporting on rankings, organic traffic, and revenue attribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a typical engagement look like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Discovery call, then a 2–4 week audit phase, then a 90-day priority plan, then monthly delivery cycles with quarterly strategy reviews. We work on rolling 90-day commitments rather than 12-month lock-ins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you report on results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Weekly Slack updates on activity. Monthly reports covering rankings, traffic, conversions, and revenue attribution where tracking permits. Quarterly business reviews with the principal stakeholder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you choose between SEO, Google Ads, and Social?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The right mix depends on intent, audience, sales cycle, and unit economics. Our default starting recommendation: SEO for compounding long-term value, Google Ads for testable demand at scale, social for retargeting and brand familiarity. We won't push services that don't fit your business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why work with a boutique agency instead of a large one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Large agencies sell senior strategy and deliver junior execution. Boutique agencies like ours deliver senior execution. We have 14 years of accumulated pattern recognition and bring it to every engagement."
+          }
+        }
+      ]
+    },
+    "offerCatalog_pricing": {
+      "@context": "https://schema.org",
+      "@type": "OfferCatalog",
+      "name": "Havoc Digital monthly retainers",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Social Media",
+          "priceCurrency": "USD",
+          "price": "199.00",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "199.00",
+            "priceCurrency": "USD",
+            "unitCode": "MON",
+            "billingDuration": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Social Media Management",
+            "description": "Content calendar, community management, monthly performance reporting."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Google My Business + Maps",
+          "priceCurrency": "USD",
+          "price": "350.00",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "350.00",
+            "priceCurrency": "USD",
+            "unitCode": "MON",
+            "billingDuration": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Google My Business + Local SEO",
+            "description": "Profile optimization, post automation, citations, monthly local rank reporting."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "LinkedIn Growth & Outreach",
+          "priceCurrency": "USD",
+          "price": "450.00",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "450.00",
+            "priceCurrency": "USD",
+            "unitCode": "MON",
+            "billingDuration": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "LinkedIn Marketing",
+            "description": "Profile optimization, content production, compliant outreach, pipeline reporting."
+          }
+        }
+      ]
+    },
+    "service_template": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "REPLACE_SERVICE_NAME",
+      "provider": { "@id": "https://havoc.digital/#organization" },
+      "areaServed": [
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Thailand" }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small to mid-sized businesses"
+      },
+      "description": "REPLACE_SERVICE_DESCRIPTION",
+      "url": "https://havoc.digital/services/REPLACE_SLUG"
+    }
+  }
+}

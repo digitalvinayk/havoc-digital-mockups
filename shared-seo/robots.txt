@@ -1,0 +1,75 @@
+# Havoc Digital — robots.txt
+# Last reviewed: 2026-05-07
+# Policy: Allow major search engines AND AI search crawlers (we want to be cited).
+
+# === Search engines ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# === AI search crawlers — explicitly allowed ===
+# OpenAI training crawler
+User-agent: GPTBot
+Allow: /
+
+# OpenAI on-demand fetch (when ChatGPT users ask about your site)
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI search index crawler (for ChatGPT search feature)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude crawler
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic on-demand fetch
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI training (separate from Googlebot indexing)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl (used to train many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazonbot (Alexa, Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# Bytespider (TikTok / ByteDance)
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# === Default ===
+User-agent: *
+Allow: /
+
+# === Sitemaps ===
+Sitemap: https://havoc.digital/sitemap.xml

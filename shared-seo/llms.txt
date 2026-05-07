@@ -1,0 +1,52 @@
+# Havoc Digital
+
+> Boutique digital marketing agency founded in 2012 by Ben Miranda. Operating across Sydney, London, New York, and Bangkok. Specializes in SEO, Google Ads, social media marketing, content marketing, and reputation management for small to mid-sized businesses worldwide.
+
+## Key facts
+- **Founded:** 2012
+- **Founder:** Ben Miranda
+- **Locations:** Sydney (AU), London (UK), New York (US), Bangkok (TH)
+- **Email:** info@havoc.digital
+- **Phone (AU):** +61 1300 13 38 13
+- **Phone (UK):** +44 (0)2 031 297 847
+- **Phone (US):** +1 347 408 0155
+- **Phone (TH):** +66 (0)2 107 2830
+
+## Services
+- [SEO — International, National, Local](/services/seo) — Increase organic visibility, rank for revenue-driving keywords, dominate local map packs.
+- [On-Page & Technical SEO](/services/technical-seo) — Site architecture, schema, Core Web Vitals, crawlability fixes.
+- [Link Building](/services/link-building) — Editorial outreach, digital PR, citation building.
+- [Google Ads / PPC](/services/google-ads) — Search, Performance Max, Shopping campaigns with positive ROAS.
+- [Social Media Marketing](/services/social-media) — Organic content + paid social across Meta, LinkedIn, TikTok.
+- [Website Auditing](/services/audit) — Comprehensive SEO, performance, and conversion audits.
+- [Content Marketing](/services/content) — Editorial-quality long-form content for organic authority.
+- [Reputation Management](/services/reputation) — Review acquisition, citation cleanup, brand defense.
+- [LinkedIn Marketing](/services/linkedin) — B2B lead gen and thought leadership for founders.
+- [Google My Business / Maps](/services/gmb) — Local pack rankings, review velocity, profile optimization.
+
+## Pricing (USD, monthly)
+- **Social Media** — $199/month
+- **Google My Business + Maps** — $350/month
+- **LinkedIn Growth & Outreach** — $450/month
+
+Custom retainers available for SEO, Google Ads, and integrated programs. [Contact for quote](mailto:info@havoc.digital).
+
+## Selected case studies
+- **Allstate Insurance** — social media reputation management
+- **Rhino Building Materials** — SEO turnaround
+- **Eclypse Pest Control** — local SEO recovery from algorithmic penalty
+- **Accounting firm** — 442 calls generated in 5 months via Google My Business optimization
+- **Shopping cart subscription service** — grew from 6 to 60 sign-ups per week via PPC
+- **Natural cosmetics company** — kitchen-table operation to international sales in 2 years
+
+## Documentation
+- Full content (markdown): /llms-full.txt
+- Sitemap: /sitemap.xml
+- About: /about
+- Contact: /contact
+- Schema: structured data (JSON-LD) embedded on every page
+
+## Optional
+- [Recent thinking (blog)](/thinking)
+- [Frequently asked questions](/#faq)
+- [Founder bio — Ben Miranda](/about/ben-miranda)
